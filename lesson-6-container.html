@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <title>Lesson 6: Containers</title>
+</head>
+<body>
+  <!--Containers: most basic layout feature that is given by bootstrap. Containers are a fundamental building block of Bootstrap that contain, pad, and allign your content within a given device or viewpoint. Also required when using our default grid system. The way containers work is through "breakpoints" depending on the screen size. in general. the larger the container, it'll be likelier to take up the entire screen size. smaller containers will have a set pixel size the larger the screen but may also take up the entire screen size if the screen is small. we can see the specific breakpoints on the docs of bootstrap-->
+  <div class="container my-5">
+    <h2>normal container</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde adipisci totam quas atque tempora? Voluptate, aliquam. Accusantium tempora, et atque temporibus ut dolore, vel aspernatur distinctio quibusdam sequi maxime facere.</p>
+  </div>
+  
+  <!--a fluid container will always take up the entire screen size-->
+  <div class="container-fluid">
+    <h2>fluid container</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At aspernatur totam quis quam voluptate suscipit autem dolor inventore itaque perspiciatis harum quaerat atque consequatur similique laudantium, exercitationem accusamus consectetur nihil!</p>
+  </div>
+
+  <div class="container-lg my-5">
+    <h2>100% width until lg screens, then container</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At earum explicabo quibusdam nisi iusto nesciunt provident molestias dolorum illum ea nihil quam incidunt, corrupti, distinctio similique sit, non blanditiis est.</p>
+  </div>
+
+  <div class="container-xl my5">
+    <h2>100% width until xl screens, then container</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quae aliquam nisi repellat vel, ea eum quidem, corporis error, eligendi ipsa consectetur! Impedit mollitia, optio error cumque nam debitis at. Quae.</p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
