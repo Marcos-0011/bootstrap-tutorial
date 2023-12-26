@@ -1,0 +1,79 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <title>Lesson 7: Grid Layout Part 1</title>
+</head>
+<body>
+  <!--Grid: its a layout system that uses rows and columns. they also work based on breakpoints that will retain a certian width/layout depending on the size of the screen. grids always go into containers. USE OPTIONS + CLICK W MOUSE TO TYPE ON MULTIPLE LINES AT THE SAME TIME. here we make a container for all the content in one section, another for a row, others for the columns, and lastly another for each section inside the column. if we just do the class as col, each column will take up an equal amount of space. if its left like this and we reduce the screen size, the fourth column will go below the rest of the columns but the 3 first ones will never change position. this doesnt look right-->
+  <div class="container-lg my5">
+    <h2>basic grid</h2>
+    <div class="row">
+      <div class="col">
+        <div class="p-5 bg-primary text-light">col 1</div>
+      </div>
+      <div class="col">
+        <div class="p-5 bg-primary text-light">col 2</div>
+      </div>
+      <div class="col">
+        <div class="p-5 bg-primary text-light">col 3</div>
+      </div>
+      <div class="col">
+        <div class="p-5 bg-primary text-light">col 4</div>
+      </div>
+    </div>
+  </div>
+
+<!--Column Widths: here we specify the column widths. the grid system operates on a total of 12 columns. so we can add a hyphen and a number to each column so they add up to 12. however, if the screen size is reduced the columns will eventually look squished which also looks bad-->
+  <div class="container-lg my-5">
+    <h2>column widths</h2>
+    <div class="row">
+      <div class="col-6">
+        <div class="p-5 bg-primary text-light">col 1</div>
+      </div>
+      <div class="col-3">
+        <div class="p-5 bg-primary text-light">col 2</div>
+      </div>
+      <div class="col-3">
+        <div class="p-5 bg-primary text-light">col 3</div>
+      </div>
+    </div>
+  </div>
+
+  <!--responsive column widths will allows us to create more dynamic/responsive columns that will appropriately adjust to the screen size. for these columns, since we dont specify the size we want for x-small screens, the default will be 12 and will be 100% of the screen. once we reach the breakpoint of small screens, they will all cover 4 columns, and once its a large screen they will each be theire respective width-->
+  <div class="container-lg my-5">
+    <h2>responsive column widths</h2>
+    <div class="row">
+      <div class="col-sm-4 col-lg-6">
+        <div class="p-5 bg-primary text-light">col 1</div>
+      </div>
+      <div class="col-sm-4 col-lg-3">
+        <div class="p-5 bg-primary text-light">col 2</div>
+      </div>
+      <div class="col-sm-4 col-lg-3">
+        <div class="p-5 bg-primary text-light">col 3</div>
+      </div>
+    </div>
+  </div>
+  
+  <!--we can move our row around using justify content class on the div row. we can add start, end, between, and center depending on what we want. the default width of the columns here will be 12 until we reach the medium and larger screen sizes in which they will be 3 in width-->
+  <div class="container-lg my-5">
+    <h2>justifying columns</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-3">
+        <div class="p-5 bg-primary text-light">col 1</div>
+      </div>
+      <div class="col-md-3">
+        <div class="p-5 bg-primary text-light">col 2</div>
+      </div>
+      <div class="col-md-3">
+        <div class="p-5 bg-primary text-light">col 3</div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
