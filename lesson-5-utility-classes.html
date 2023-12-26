@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <title>Utility Classes</title>
+</head>
+<body>
+  <!--Utility classes allows us to chnage things line position, spacing, shadow, etc. use shift + option + direction button to copy code down or up-->
+
+  <!--margin and padding: NN says this is the one he uses the most. m-5 is the marin class and goes from 1-5. the higher the number the greated the margin. this applies the utility to all the sides. the same goes for padding p-1 - p-5 -->
+  <div class="bg-primary m-1 p-1">small margin and padding</div>
+  <div class="bg-primary m-5 p-5">large margin and padding</div>
+  <div class="bg-primary my-3 px-5">margin in y direction, padding in x direction</div>
+  <!--what if we want the margin or padding to be different in each direction? we would do t for top, b for bottom, s for start/left, and e for end/right-->
+  <div class="bg-primary mt-3 mb-4 ms-5 me-1 ps-5 pt-4 pe-2 pb-1">m & p for each direction</div>
+
+  <!--borders: margin and padding works the same for borders, just need to add the class of border to create the border. can add individual borders, colors, weight, and rounded effects-->
+  <div class="m-3 p-3 border">default border</div>
+  <div class="m-3 p-3 border-top border-end">individual borders</div>
+  <div class="m-3 p-3 border-start border-success">border success color at start</div>
+  <div class="m-3 p-3 border-start border-danger border-5">thicker border</div>
+  <div class="m-3 p-3 rounded border border-5">rounded corners</div>
+  <div class="m-3 p-3 rounded-pill border border-5">rounded pill corners</div>
+
+  <!--box shadow: add shadow class. can make it small w -sm, large w -lg, or medium w just the shadow class-->
+  <div class="m-3 p3 shadow-sm">element w small box shadow</div>
+  <div class="m-3 p3 shadow">element w large box shadow</div>
+
+
+  <!--font weight: add the class of fw. then add a hyphen and the style you want like bold or light. can also do font style w fst and then add italic-->
+  <p class="fw-bold">bold text</p>
+  <p class="fw-bolder">bolder text</p>
+  <p>normal text</p>
+  <p class="fw-light">light text</p>
+  <p class="fst-italic">italic text</p>
+  <p class="fst-italic fw-light">light italic text</p>
+
+  <!--there are more utility classes than this and can be seen on the bootstrap documents. these are useful when want to customize the look of our text-->
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
