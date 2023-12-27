@@ -12,10 +12,46 @@
 </head>
 <body>
 
-  <!--navbar-->
+  <!--LESSON 9: navbar-->
+  <nav class="navbar navbar-expand-md navbar-light">
+    <div class="container-xxl">
+      <a href="#intro" class="navbar-brand">
+        <!--the span element is an inline container that is used for applying styles or scripting a specific portion of text within a larger block of text-->
+        <span class="fw-bold text-secondary">
+          Net Ninja Pro - the Book
+        </span>
+      </a>
+      <!--toggle button for mobile nav: here we're creating the burger menu on the right side of our website. the data-bs-toggle class is telling the computer to toggle something w the class of collapse that we'll create later. data-bs-target tells the computer what collapsable section we want to target, and it'll either expand or collapse it. the aria classes are for the screen reader/user. it lets them understand what is controlled by this element since they dont understand JS. lets them know what is controlled and if its expanded. last class lets them know what this button does, it toggles navigation-->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <!--then we do a span class for the navbar icon-->
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
+      <!--navbar links: the first class is collapse which is what the data-bs-toggle class is equal to so it will create the collapse functionality. navbar-collapse stylizes it for us. justify-content-end will move the list of links to the right when we click on the nav button. the id is used in the previouse button to tell that button what to target-->
+      <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
+        <ul class="navbar-nav"> <!--ul tag is for an unordered list which is then filled w tags of li that is used for the list of items. navbar-nav is for stylistic purposes. NN says he'll literally copy and paste the code from the BS docs and play w it to see what he likes-->
+          <li class="nav-item"> <!--nav-item styles the item-->
+            <a class="nav-link" href="#topics">About The Book</a>
+          </li> <!--nav-link styles the links and the href will link them to the section of our website-->
+          <li class="nav-item">
+            <a class="nav-link" href="#reviews">Review</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Get in Touch</a>
+          </li>
+          <li class="nav-item d-md-none">
+            <a class="nav-link" href="#pricing">Pricing</a>
+          </li>
+          <!--in the following list item, d-none means it wont display anything by default/smaller screens until it reachers the breakpoint of medium screens where it will display inline. the previous pricing link wont show on medium screens. this is just meant to show a different variation on the link. NOT EXPECTED TO KNOW WHAT ALL THESE CLASSES DO. CAN ALWAYS GO TO BS DOCS AND COPY+PASTE AND PLAY W CLASSES-->
+          <li class="nav-item ms-2 d-none d-md-inline">
+            <a class="btn btn-secondary" href="#pricing">buy now</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-  <!--main image and intro text-->
+  <!--LESSON 8: main image and intro text-->
   <section id="intro">
     <div class="container-lg">
       <div class="row justify-content-center align-items-center">
@@ -28,7 +64,7 @@
           <p class="lead my-4 text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
           <a href="#pricing" class="btn btn-secondary btn-lg">Buy Now</a>
         </div>
-        <!--the column that contains the image will always have a default of 12 columns on smallers screens but will do 5 at the medium breakpoint and will also have a default of text-center (this alos centers the image). without the class of img fluid, the img breaks out of the constraints of the column. to make it look nice and responsive, add the img fluid class. additionally, the image looks weird on smaller screens. we can make it disappear on smaller screens using the class of d-none (im guessing d is for display). so thats the default for small screens but the following class says at the medium breakpoint it will display it as a block element?-->
+        <!--the column that contains the image will always have a default of 12 columns on smallers screens but will do 5 at the medium breakpoint and will also have a default of text-center (this alos centers the image). without the class of img fluid, the img breaks out of the constraints of the column. to make it look nice and responsive, add the img fluid class. additionally, the image looks weird on smaller screens. we can make it disappear on smaller screens using the class of d-none (im guessing d is for display). so thats the default for small screens but the following class says at the medium breakpoint it will display it as a block element? END OF LESSON 8-->
         <div class="col-md-5 text-center d-none d-md-block">
           <img class="img-fluid" src="/assets/ebook-cover.png" alt="ebook cover">
         </div>
