@@ -313,7 +313,63 @@
   </section>
 
   <!--contact form-->
+  <!--form-control, form-label, form-select, input-group, input-group-text. These will be the significant classes that will stylize our form-->
+  <section id="contact">
+    <div class="container-lg">
+      <div class="text-center">
+        <h2>Get in Touch</h2>
+        <p class="lead">Questions to ask? Fill out the form to contact me directly...</p>
+      </div>
 
+      <div class="row justify-content-center my-5"> <!--again, in a grid to give a responsive design-->
+        <div class="col-lg-6">
+          <form>
+            <label for="email" class="form-label">Email address:</label>
+            <div class="mb-4 input-group"> <!--input group allows us to add images to our input field to stylize or make it more efficient-->
+              <span class="input-group-text">
+                <i class="bi bi-envelope-fill"></i>
+              </span>
+              <input type="email" class="form-control" id="email" placeholder="e.g. mario@example.com">
+            </div>
+            
+            <label for="name" class="form-label">Name:</label>
+            <div class="input-group mb-4">
+              <span class="input-group-text">
+                <i class="bi bi-person-fill"></i>
+              </span>
+              <input type="text" class="form-control" id="name" placeholder="e.g. Mario">
+            </div>
+            
+
+            <!--here we create options for our input-->
+            <label for="subject" class="form-label">What is your question about?</label>
+            <div class="input-group mb-4">
+              <span class="input-group-text">
+                <i class="bi bi-chat-right-dots-fill"></i>
+              </span>
+              <select class="form-select" id="subject">
+                <option value="pricing" selected>Pricing query</option>
+                <option value="content">Content query</option>
+                <option value="other">Other query</option>
+              </select>
+            </div>
+            
+            <div class="form-floating mb-4 mt-5">
+              <!--form control stylizes the textarea nicely-->
+              <textarea id="query" class="form-control" style="height: 140px;"></textarea>
+              <!--we created a floating label by putting it inside the form floating div-->
+              <label for="query">Your query...</label>
+            </div>
+
+            <div class="mb-4 text-center">
+              <button type="submit" class="btn btn-secondary">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      
+    </div>
+  </section>
 
   <!--get updates/modal trigger-->
 
