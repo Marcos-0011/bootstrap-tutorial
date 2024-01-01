@@ -128,10 +128,113 @@
     </div>
   </section>
 
-  <!--topics at a glance-->
+  <!--LESSON 11 ACCORDIONS: topics at a glance-->
+  <section id="topics">
+    <div class="container-md">
+      <div class="text-center">
+        <h2>Inside the Book...</h2>
+        <p class="lead text-muted">A quick glance at the topics you'll learn</p>
+      </div>
+
+      <div class="row my-5 g-5 justify-content-around align-items-center">
+        <div class="col-6 col-lg-4">
+          <img src="/assets/kindle.png" class="img-fluid" alt="ebook">
+        </div>
+
+        <div class="col-lg-6"> <!--needed to place accordion with a column within the row to complete the grid to make it have a responsive design. in this case we didn't specify its col size on screens smaller than large so by default it will take up the whole screen. once it reaches the large breakpoint, it will take up 6 columns-->
+          <!--accordion: the accordion class creates an accordion and we give it the id of chapters. accordion item div will the the accordion header and content/body-->
+          <div class="accordion" id="chapters">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading-1">
+                <!--class of accordion button styles it. data-bs-toggle tells the type of behavior it will do. target will tell computer what content to show. aria-expanded is set to true as it will by defeult be expanded-->
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#chapter-1" aria-expanded="true" aria-controls="chapter-1">
+                  Chapter 1 - Your First Web Page
+                </button>
+              </h2>
+              <!--the id of chapter 1 will tell the previous button to open this content as thats the target. setting these up correctly is important as you want to correctly target the content you want to open and close. collapse class tells it the type of behavior it has. show class says by default it will show. aria labeledby tells viewer to what heading it belongs. data-bs-parent tells computer to what part of the accordion this content belongs to-->
+              <div id="chapter-1" class="accordion-collapse collapse show" aria-labelledby="heading-1" data-bs-parent="#chapters">
+                <div class="accordion-body">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis maxime provident, laudantium id neque soluta? Facere id voluptas hic adipisci, eum ab nisi, natus, asperiores deserunt corrupti esse corporis? Suscipit?
+                  </p>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta facilis laborum, possimus quis consequatur maiores neque labore asperiores facere delectus perferendis? Sapiente assumenda magni porro et natus dolorum suscipit omnis.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading-2">
+                <!--the collapsed class unhighlights the button of the accordion header, letting the viewer know that its collapsed. without it, the heading is highlighted blue, saying its not collapsed even tho it might be collapsed. basically an aesthetic component and not absolutely necessary-->
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#chapter-2" aria-expanded="false" aria-controls="chapter-2">
+                  Chapter 2 - Mastering CSS
+                </button>
+              </h2>
+              <div id="chapter-2" class="accordion-collapse collapse" aria-labelledby="heading-2" data-bs-parent="#chapters">
+                <div class="accordion-body">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis maxime provident, laudantium id neque soluta? Facere id voluptas hic adipisci, eum ab nisi, natus, asperiores deserunt corrupti esse corporis? Suscipit?
+                  </p>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta facilis laborum, possimus quis consequatur maiores neque labore asperiores facere delectus perferendis? Sapiente assumenda magni porro et natus dolorum suscipit omnis.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading-3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#chapter-3" aria-expanded="false" aria-controls="chapter-3">
+                  Chapter 3 - The Power of Javascript
+                </button>
+              </h2>
+              <div id="chapter-3" class="accordion-collapse collapse" aria-labelledby="heading-3" data-bs-parent="#chapters">
+                <div class="accordion-body">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis maxime provident, laudantium id neque soluta? Facere id voluptas hic adipisci, eum ab nisi, natus, asperiores deserunt corrupti esse corporis? Suscipit?
+                  </p>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta facilis laborum, possimus quis consequatur maiores neque labore asperiores facere delectus perferendis? Sapiente assumenda magni porro et natus dolorum suscipit omnis.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading-4">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#chapter-4" aria-expanded="false" aria-controls="chapter-4">
+                  Chapter 4 - Storing Data (Firebase Databases)
+                </button>
+              </h2>
+              <div id="chapter-4" class="accordion-collapse collapse" aria-labelledby="heading-4" data-bs-parent="#chapters">
+                <div class="accordion-body">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis maxime provident, laudantium id neque soluta? Facere id voluptas hic adipisci, eum ab nisi, natus, asperiores deserunt corrupti esse corporis? Suscipit?
+                  </p>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta facilis laborum, possimus quis consequatur maiores neque labore asperiores facere delectus perferendis? Sapiente assumenda magni porro et natus dolorum suscipit omnis.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading-5">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#chapter-5" aria-expanded="false" aria-controls="chapter-5">
+                  Chapter 5 - User Authentication
+                </button>
+              </h2>
+              <div id="chapter-5" class="accordion-collapse collapse" aria-labelledby="heading-5" data-bs-parent="#chapters">
+                <div class="accordion-body">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis maxime provident, laudantium id neque soluta? Facere id voluptas hic adipisci, eum ab nisi, natus, asperiores deserunt corrupti esse corporis? Suscipit?
+                  </p>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta facilis laborum, possimus quis consequatur maiores neque labore asperiores facere delectus perferendis? Sapiente assumenda magni porro et natus dolorum suscipit omnis.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+      ``</div>
+      </div>
+    </div>
+  </section>
 
 
-  <!--revies list-->
+  <!--reviews list-->
+
+
+  <!--contact form-->
+
+
+  <!--get updates/modal trigger-->
 
 
   
