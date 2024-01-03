@@ -68,7 +68,10 @@
         </div>
         <!--the column that contains the image will always have a default of 12 columns on smallers screens but will do 5 at the medium breakpoint and will also have a default of text-center (this alos centers the image). without the class of img fluid, the img breaks out of the constraints of the column. to make it look nice and responsive, add the img fluid class. additionally, the image looks weird on smaller screens. we can make it disappear on smaller screens using the class of d-none (im guessing d is for display). so thats the default for small screens but the following class says at the medium breakpoint it will display it as a block element? END OF LESSON 8-->
         <div class="col-md-5 text-center d-none d-md-block">
-          <img class="img-fluid" src="/assets/ebook-cover.png" alt="ebook cover">
+          <!--LESSON 15 tooltip: the tt class isnt a BS class, its a class we made up so we can call it anything we want. when we use the JS required for the tooltip, we need a specific class which is the class tt is for. data-bs-placement attribute is where the placement of tooltip will be. title is what the tooltip will display. We need JS bc there are a handful of BS elements that require JS to be triggered or to be started. the JS is essentially a loop function that creates tooltip for each element w the class of tt and makes the tooltip out of the title attribute-->
+          <span class="tt" data-bs-placement="bottom" title="Net Ninja Book Cover">
+            <img class="img-fluid" src="/assets/ebook-cover.png" alt="ebook cover">
+          </span>
         </div>
       </div>
     </div>
@@ -330,6 +333,12 @@
                 <i class="bi bi-envelope-fill"></i>
               </span>
               <input type="email" class="form-control" id="email" placeholder="e.g. mario@example.com">
+              <!--LESSON 15 tooltip: -->
+              <span class="input-group-text">
+                <span class="tt" data-bs-placement="bottom" title="Enter an email address we can reply to.">
+                  <i class="bi bi-question-circle text-muted"></i>
+                </span>
+              </span>
             </div>
             
             <label for="name" class="form-label">Name:</label>
@@ -338,6 +347,12 @@
                 <i class="bi bi-person-fill"></i>
               </span>
               <input type="text" class="form-control" id="name" placeholder="e.g. Mario">
+              <!--LESSON 15 tooltip: -->
+              <span class="input-group-text">
+                <span class="tt" data-bs-placement="bottom" title="Pretty self explanatory...">
+                  <i class="bi bi-question-circle text-muted"></i>
+                </span>
+              </span>
             </div>
             
 
@@ -376,5 +391,12 @@
 
   
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script>
+    const tooltips = document.querySelectorAll('.tt')
+    tooltips.forEach(t => {
+      new bootstrap.Tooltip(t)
+    })
+  </script>
+
 </body>
 </html>
