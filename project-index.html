@@ -65,6 +65,10 @@
           </h1>
           <p class="lead my-4 text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
           <a href="#pricing" class="btn btn-secondary btn-lg">Buy Now</a>
+          <!-- LESSON 17 open sidebar/ offcanvas: href tells the anchor what ID to look for which in this case is the side bar. d-block is display block so the anchor will appear in its own line instead of inline w the other elements. data-bs-toggle is telling BS what kind of functionality is occuring -->
+          <a href="#sidebar" class="d-block mt-3" data-bs-toggle="offcanvas" role="button" aria-controls="sidebar">
+            Explore my other books
+          </a>
         </div>
         <!--the column that contains the image will always have a default of 12 columns on smallers screens but will do 5 at the medium breakpoint and will also have a default of text-center (this alos centers the image). without the class of img fluid, the img breaks out of the constraints of the column. to make it look nice and responsive, add the img fluid class. additionally, the image looks weird on smaller screens. we can make it disappear on smaller screens using the class of d-none (im guessing d is for display). so thats the default for small screens but the following class says at the medium breakpoint it will display it as a block element? END OF LESSON 8-->
         <div class="col-md-5 text-center d-none d-md-block">
@@ -424,6 +428,17 @@
         </div>
         <!--there are other versions of modals in the BS docs-->
       </div>
+    </div>
+  </div>
+
+  <!-- offcanvas: offcanvas class is what is needed for building it and the start is telling it to appear from the right. tabnindex=-1 means it will take it out of the tab if youre tabbing through the page. the id matches the anchor to this. and the arialabelledby will go inside the offcanvas-->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebar" aria-labelledby="sidebar-label">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="sidebar-label">My Other Books</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum libero voluptatum nihil distinctio ab accusantium, natus qui labore, deleniti, alias explicabo eos. Amet ea quos ex et officia tenetur blanditiis!</p>
     </div>
   </div>
 
